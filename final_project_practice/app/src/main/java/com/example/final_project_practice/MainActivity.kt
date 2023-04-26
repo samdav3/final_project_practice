@@ -1,5 +1,6 @@
 package com.example.final_project_practice
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -40,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun CheckLogin(txtLogin: String, txtPassword: String): LoginSuccess{
+    fun CheckLogin(txtLogin: String, txtPassword: String): Any {
         val holdLogin = "Sam"
         val holdPass = "password"
 
@@ -49,6 +50,10 @@ class MainActivity : AppCompatActivity() {
         }
         return if (holdPass != txtPassword){
             return LoginSuccess.password
-        }else LoginSuccess.success
+        }else {
+            LoginSuccess.success
+            val changePage = Intent(this, MainClassList::class.java)
+            startActivity(changePage)
+        }
     }
 }
