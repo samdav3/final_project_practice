@@ -38,10 +38,10 @@ class MainActivity2 : AppCompatActivity() {
             startActivity(back)
         }
 
-        //confirmBets.setOnClickListener {
-        //            val confirm = Intent(this, MainActivity3::class.java)
-        //            startActivity(confirm)
-        //        }
+        confirmBets.setOnClickListener {
+                    val confirm = Intent(this, MainActivity::class.java)
+                    startActivity(confirm)
+                }
 
 
     }

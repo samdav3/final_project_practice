@@ -37,27 +37,6 @@ class MainActivity : AppCompatActivity() {
         val isChecked6: Boolean = boat6Check
 
 
-        val boatA = Intent(this, MainActivity2::class.java)
-        boatA.putExtra("checkBoxValue", isChecked1)
-        startActivity(boatA)
-        val boatB = Intent(this, MainActivity2::class.java)
-        boatB.putExtra("checkBoxValue", isChecked2)
-        startActivity(boatB)
-        val boatC = Intent(this, MainActivity2::class.java)
-        boatC.putExtra("checkBoxValue", isChecked3)
-        startActivity(boatC)
-        val boatD = Intent(this, MainActivity2::class.java)
-        boatD.putExtra("checkBoxValue", isChecked4)
-        startActivity(boatD)
-        val boatE = Intent(this, MainActivity2::class.java)
-        boatE.putExtra("checkBoxValue", isChecked5)
-        startActivity(boatE)
-        val boatF = Intent(this, MainActivity2::class.java)
-        boatF.putExtra("checkBoxValue", isChecked6)
-        startActivity(boatF)
-
-
-
         if (boat1Check) {
             checked++
         }
@@ -76,6 +55,24 @@ class MainActivity : AppCompatActivity() {
         if (boat6Check){
             checked++
         }
+        val boatA = Intent(this, MainActivity2::class.java)
+        boatA.putExtra("checkBoxValue", isChecked1)
+        startActivity(boatA)
+        val boatB = Intent(this, MainActivity2::class.java)
+        boatB.putExtra("checkBoxValue", isChecked2)
+        startActivity(boatB)
+        val boatC = Intent(this, MainActivity2::class.java)
+        boatC.putExtra("checkBoxValue", isChecked3)
+        startActivity(boatC)
+        val boatD = Intent(this, MainActivity2::class.java)
+        boatD.putExtra("checkBoxValue", isChecked4)
+        startActivity(boatD)
+        val boatE = Intent(this, MainActivity2::class.java)
+        boatE.putExtra("checkBoxValue", isChecked5)
+        startActivity(boatE)
+        val boatF = Intent(this, MainActivity2::class.java)
+        boatF.putExtra("checkBoxValue", isChecked6)
+        startActivity(boatF)
 
         nextBtn.setOnClickListener {
             when (check(checked != 2)) {
