@@ -6,11 +6,11 @@ import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : AppCompatActivity() {
+class place_bets : AppCompatActivity() {
     @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_place_bets)
 
 
         val boat1 = findViewById<CheckBox>(R.id.ChkBoat1)
@@ -55,22 +55,22 @@ class MainActivity : AppCompatActivity() {
         if (boat6Check){
             checked++
         }
-        val boatA = Intent(this, MainActivity2::class.java)
+        val boatA = Intent(this, confirm_bets::class.java)
         boatA.putExtra("checkBoxValue", isChecked1)
         startActivity(boatA)
-        val boatB = Intent(this, MainActivity2::class.java)
+        val boatB = Intent(this, confirm_bets::class.java)
         boatB.putExtra("checkBoxValue", isChecked2)
         startActivity(boatB)
-        val boatC = Intent(this, MainActivity2::class.java)
+        val boatC = Intent(this, confirm_bets::class.java)
         boatC.putExtra("checkBoxValue", isChecked3)
         startActivity(boatC)
-        val boatD = Intent(this, MainActivity2::class.java)
+        val boatD = Intent(this, confirm_bets::class.java)
         boatD.putExtra("checkBoxValue", isChecked4)
         startActivity(boatD)
-        val boatE = Intent(this, MainActivity2::class.java)
+        val boatE = Intent(this, confirm_bets::class.java)
         boatE.putExtra("checkBoxValue", isChecked5)
         startActivity(boatE)
-        val boatF = Intent(this, MainActivity2::class.java)
+        val boatF = Intent(this, confirm_bets::class.java)
         boatF.putExtra("checkBoxValue", isChecked6)
         startActivity(boatF)
 
@@ -86,9 +86,11 @@ class MainActivity : AppCompatActivity() {
                 }
                 else ->
                     nextBtn.setOnClickListener {
-                        val intent = Intent(this, MainActivity2::class.java)
+                        val intent = Intent(this, confirm_bets::class.java)
                         startActivity(intent)
                     }
 
             }
-        }}}
+        }
+    }
+}

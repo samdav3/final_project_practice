@@ -6,10 +6,10 @@ import android.widget.Button
 import android.widget.CheckedTextView
 import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity2 : AppCompatActivity() {
+class confirm_bets : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main2)
+        setContentView(R.layout.activity_confirm_bets)
 
         val confirmBets = findViewById<Button>(R.id.confirmBtn)
         val backBtn = findViewById<Button>(R.id.BckBtn)
@@ -34,12 +34,12 @@ class MainActivity2 : AppCompatActivity() {
 
 
         backBtn.setOnClickListener {
-            val back = Intent(this, MainActivity::class.java)
+            val back = Intent(this, place_bets::class.java)
             startActivity(back)
         }
 
         confirmBets.setOnClickListener {
-                    val confirm = Intent(this, MainActivity::class.java)
+                    val confirm = Intent(this, place_bets::class.java)
                     startActivity(confirm)
                 }
 
