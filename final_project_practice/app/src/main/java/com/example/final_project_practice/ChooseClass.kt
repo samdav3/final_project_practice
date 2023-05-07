@@ -57,10 +57,10 @@ class ChooseClass : AppCompatActivity() {
 
         val extras = intent.extras
         if (extras != null){
-            firstName = extras.getString("firstName")
-            lastName = extras.getString("lastName")
-            phone = extras.getString("phone")
-            birthDate = extras.getString("birthDate")
+            firstName = extras.getString("FirstName")
+            lastName = extras.getString("LastName")
+            phone = extras.getString("Phone")
+            birthDate = extras.getString("BirthDate")
             isDegreeCert = extras.getString("isDegreeCert")
             degreeCertification = extras.getString("degreeCert")
         }
@@ -115,19 +115,19 @@ class ChooseClass : AppCompatActivity() {
 
                 //intent to next screen
                 val nextScreen2 = Intent(this@ChooseClass, Summary::class.java).apply{
-                    putExtra("firstName", firstName)
-                    putExtra("lastName", lastName)
-                    putExtra("phone", phone)
-                    putExtra("birthDate", birthDate)
+                    putExtra("FirstName", firstName)
+                    putExtra("LastName", lastName)
+                    putExtra("Phone", phone)
+                    putExtra("BirthDate", birthDate)
                     putExtra("isDegreeCert", isDegreeCert)
                     putExtra("Class1", ctv1Text)
-                    putExtra("Selected1", selectTime1)
+                    putExtra("Selected1", radio1Txt)
                     putExtra("Class2", ctv2Text)
-                    putExtra("Selected2", selectTime2)
+                    putExtra("Selected2", radio2Txt)
                     putExtra("Class3", ctv3Text)
-                    putExtra("Selected3", selectTime3)
+                    putExtra("Selected3", radio3Txt)
                     putExtra("Class4", ctv4Text)
-                    putExtra("Selected4", selectTime4)
+                    putExtra("Selected4", radio4Txt)
                     putExtra("degreeCert", degreeCertification)
                 }
                 //Start the Activity

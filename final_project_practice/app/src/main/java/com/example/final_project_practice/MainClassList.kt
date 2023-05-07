@@ -59,10 +59,10 @@ class MainClassList : AppCompatActivity() {
                     spMonth.selectedItem.toString() + "/" + txtDay.text.toString() + "/" + txtYear.text.toString()
 
                 val nextScreen = Intent(this@MainClassList, ChooseClass::class.java)
-                nextScreen.putExtra("First Name", firstName.text.toString())
-                nextScreen.putExtra("Last Name", lastName.text.toString())
+                nextScreen.putExtra("FirstName", firstName.text.toString())
+                nextScreen.putExtra("LastName", lastName.text.toString())
                 nextScreen.putExtra("Phone", phone.text.toString())
-                nextScreen.putExtra("Birth Date", doBirth)
+                nextScreen.putExtra("BirthDate", doBirth)
 
                 if (spnDegree.visibility == View.VISIBLE) {
                     nextScreen.putExtra("isDegreeCert", "Degree")

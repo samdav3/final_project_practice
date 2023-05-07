@@ -12,10 +12,10 @@ class Summary : AppCompatActivity() {
 
         val extras = intent.extras
         if (extras != null){
-            val firstName = extras.getString("firstName")
-            val lastName = extras.getString("lastName")
-            val phone = extras.getString("phone")
-            val birthDate = extras.getString("birthDate")
+            val firstName = extras.getString("FirstName")
+            val lastName = extras.getString("LastName")
+            val phone = extras.getString("Phone")
+            val birthDate = extras.getString("BirthDate")
             val isDegreeCert = extras.getString("isDegreeCert")
             val degreeCertification = extras.getString("degreeCert")
             val class1 = extras.getString("Class1")
@@ -40,7 +40,7 @@ class Summary : AppCompatActivity() {
             txtDegreePlan.text = "$isDegreeCert"
             txtMajor.text = "$degreeCertification"
 
-            val classSchedule = java.lang.StringBuilder(250)
+            val classSchedule = java.lang.StringBuilder(300)
             if (class1 != ""){
                 classSchedule.append(class1 + "\n" + selected1 + "\n\n")
             }
